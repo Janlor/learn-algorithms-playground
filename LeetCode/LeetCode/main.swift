@@ -15,4 +15,5 @@ import Foundation
 //DeleteListNode().test()
 //CopyRandomList().test()
 //ValidParentheses().test()
-ReverseWords().test()
+//ReverseWords().test()
+StackQueue1().test()
