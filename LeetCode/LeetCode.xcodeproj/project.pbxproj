@@ -14,6 +14,7 @@
 		7A4A6B912B4514AB003BD046 /* 21.合并两个有序链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A6B902B4514AB003BD046 /* 21.合并两个有序链表.swift */; };
 		7A4A6B942B4514D4003BD046 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A6B932B4514D4003BD046 /* ListNode.swift */; };
 		7A4A6B962B452A5D003BD046 /* 206.反转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A6B952B452A5D003BD046 /* 206.反转链表.swift */; };
+		7A77A06D2EF92A8800A1A907 /* 20.有效的括号.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77A06C2EF92A8800A1A907 /* 20.有效的括号.swift */; };
 		7AB992922B46A17C008AC29F /* 142.环形链表II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB992912B46A17C008AC29F /* 142.环形链表II.swift */; };
 		7AB992942B46B8FB008AC29F /* 141.环形链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB992932B46B8FB008AC29F /* 141.环形链表.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		7A4A6B902B4514AB003BD046 /* 21.合并两个有序链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "21.合并两个有序链表.swift"; sourceTree = "<group>"; };
 		7A4A6B932B4514D4003BD046 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		7A4A6B952B452A5D003BD046 /* 206.反转链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "206.反转链表.swift"; sourceTree = "<group>"; };
+		7A77A06C2EF92A8800A1A907 /* 20.有效的括号.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20.有效的括号.swift"; sourceTree = "<group>"; };
 		7AB992912B46A17C008AC29F /* 142.环形链表II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "142.环形链表II.swift"; sourceTree = "<group>"; };
 		7AB992932B46B8FB008AC29F /* 141.环形链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "141.环形链表.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				7A0D3C6B2BD4DB2F00AE1DC2 /* 86.分隔链表.swift */,
 				7A0D3C6D2BD4FE1A00AE1DC2 /* 237.删除链表中的节点.swift */,
 				7A0D3C6F2BD5041600AE1DC2 /* 138.随机链表的复制.swift */,
+				7A77A06C2EF92A8800A1A907 /* 20.有效的括号.swift */,
 				7A4A6B922B4514BB003BD046 /* Sources */,
 			);
 			path = LeetCode;
@@ -155,6 +158,7 @@
 				7A4A6B8A2B451483003BD046 /* main.swift in Sources */,
 				7A0D3C6C2BD4DB2F00AE1DC2 /* 86.分隔链表.swift in Sources */,
 				7A4A6B912B4514AB003BD046 /* 21.合并两个有序链表.swift in Sources */,
+				7A77A06D2EF92A8800A1A907 /* 20.有效的括号.swift in Sources */,
 				7AB992922B46A17C008AC29F /* 142.环形链表II.swift in Sources */,
 				7A4A6B962B452A5D003BD046 /* 206.反转链表.swift in Sources */,
 				7A0D3C6E2BD4FE1A00AE1DC2 /* 237.删除链表中的节点.swift in Sources */,
