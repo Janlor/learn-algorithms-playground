@@ -18,4 +18,5 @@ import Foundation
 //ReverseWords().test()
 //StackQueue1().test()
 //FirstUniqChar().test()
-WordisAnagram().test()
+//WordisAnagram().test()
+WordisIsomorphic().test()
