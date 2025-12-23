@@ -16,4 +16,5 @@ import Foundation
 //CopyRandomList().test()
 //ValidParentheses().test()
 //ReverseWords().test()
-StackQueue1().test()
+//StackQueue1().test()
+FirstUniqChar().test()
