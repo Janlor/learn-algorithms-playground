@@ -128,3 +128,17 @@
 [237.删除链表中的节点](LeetCode/LeetCode/237.删除链表中的节点.swift)
 
 [138.随机链表的复制](LeetCode/LeetCode/138.随机链表的复制.swift)
+
+[20.有效的括号](LeetCode/LeetCode/20.有效的括号.swift)
+
+[151.反转字符串中的单词](LeetCode/LeetCode/151.反转字符串中的单词.swift)
+
+[232.用栈实现队列](LeetCode/LeetCode/232.用栈实现队列.swift)
+
+[387.字符串中的第一个唯一字符](LeetCode/LeetCode/387.字符串中的第一个唯一字符.swift)
+
+[242.有效的字母异位词](LeetCode/LeetCode/242.有效的字母异位词.swift)
+
+## LeetCodePackage
+
+[205.同构字符串](LeetCodePackage/Sources/LeetCodePackage/Isomorphic.swift)

@@ -1,5 +1,5 @@
 //
-//  242. 有效的字母异位词.swift
+//  242.有效的字母异位词.swift
 //  LeetCode
 //
 //  Created by Janlor on 2025/12/23.

@@ -32,7 +32,7 @@ import Foundation
 /// - `t.length == s.length`
 /// - 字符串仅包含 ASCII 字符
 class Isomorphic {
-    // ✅ 双字典解法
+    /// ✅ 双字典解法
     func isIsomorphic(_ s: String, _ t: String) -> Bool {
         guard s.count == t.count else {
             return false
@@ -55,6 +55,30 @@ class Isomorphic {
             }
         }
         
+        return true
+    }
+    
+    /// ❌ 单字典无法做到同构
+    func isIsomorphic2(_ s: String, _ t: String) -> Bool {
+        guard s.count == t.count else {
+            return false
+        }
+        
+        var dict: [Character: Character] = [:]
+        
+        for i in s.indices {
+            let sch = s[i]
+            let tch = t[i]
+            if let val = dict[sch] {
+                if tch == val {
+                    continue
+                } else {
+                    return false
+                }
+            } else {
+                dict[sch] = tch
+            }
+        }
         return true
     }
 }
