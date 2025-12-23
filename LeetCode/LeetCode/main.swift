@@ -17,4 +17,5 @@ import Foundation
 //ValidParentheses().test()
 //ReverseWords().test()
 //StackQueue1().test()
-FirstUniqChar().test()
+//FirstUniqChar().test()
+WordisAnagram().test()
