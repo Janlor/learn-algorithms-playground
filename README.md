@@ -148,3 +148,5 @@
 [392.判断子序列](LeetCodePackage/Sources/LeetCodePackage/IsSubsequence.swift)
 
 [876.链表的中间节点](LeetCodePackage/Sources/LeetCodePackage/MiddleNode.swift)
+
+[160.相交链表](LeetCodePackage/Sources/LeetCodePackage/GetIntersectionNode.swift)
