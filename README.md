@@ -146,3 +146,5 @@
 [409.最长回文串](LeetCodePackage/Sources/LeetCodePackage/LongestPalindrome.swift)
 
 [392.判断子序列](LeetCodePackage/Sources/LeetCodePackage/IsSubsequence.swift)
+
+[876.链表的中间节点](LeetCodePackage/Sources/LeetCodePackage/MiddleNode.swift)
