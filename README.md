@@ -144,3 +144,5 @@
 [205.同构字符串](LeetCodePackage/Sources/LeetCodePackage/Isomorphic.swift)
 
 [409.最长回文串](LeetCodePackage/Sources/LeetCodePackage/LongestPalindrome.swift)
+
+[392.判断子序列](LeetCodePackage/Sources/LeetCodePackage/IsSubsequence.swift)
