@@ -152,3 +152,5 @@
 [160.相交链表](LeetCodePackage/Sources/LeetCodePackage/GetIntersectionNode.swift)
 
 [415.字符串相加](LeetCodePackage/Sources/LeetCodePackage/AddStrings.swift)
+
+[796.旋转字符串](LeetCodePackage/Sources/LeetCodePackage/RotateString.swift)
