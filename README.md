@@ -154,3 +154,5 @@
 [415.字符串相加](LeetCodePackage/Sources/LeetCodePackage/AddStrings.swift)
 
 [796.旋转字符串](LeetCodePackage/Sources/LeetCodePackage/RotateString.swift)
+
+[704.二分查找](LeetCodePackage/Sources/LeetCodePackage/BinarySearch.swift)
