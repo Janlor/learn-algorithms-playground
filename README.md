@@ -158,3 +158,5 @@
 [704.二分查找](LeetCodePackage/Sources/LeetCodePackage/BinarySearch.swift)
 
 [278.第一个错误的版本](LeetCodePackage/Sources/LeetCodePackage/FirstBadVersion.swift)
+
+[724.寻找数组的中心下标](LeetCodePackage/Sources/LeetCodePackage/PivotIndex.swift)
