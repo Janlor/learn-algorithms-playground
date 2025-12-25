@@ -35,7 +35,7 @@ import Foundation
 class RotateString {
     /// 标准解法
     /// - 时间复杂度：`O(n)`
-    /// - 空间复杂度：`O(1)`
+    /// - 空间复杂度：`O(n)`
     func rotateString2(_ s: String, _ goal: String) -> Bool {
         guard s.count == goal.count else {
             return false
