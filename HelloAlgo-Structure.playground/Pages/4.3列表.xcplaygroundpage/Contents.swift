@@ -102,10 +102,14 @@ class MyList {
         if _size == _capacity {
             extendCapacity()
         }
-        // 讲索引 index 以及之后的元素都向后移动一位
-        for j in sequence(first: _size - 1, next: { $0 >= index + 1 ? $0 - 1 : nil }) {
-            arr[j + 1] = arr[j]
+        // 将索引 index 以及之后的元素都向后移动一位
+        for j in stride(from: _size, to: index, by: -1) {
+            arr[j] = arr[j - 1]
         }
+//        for j in stride(from: _size - 1, through: index, by: -1) {
+////        for j in sequence(first: _size - 1, next: { $0 >= index + 1 ? $0 - 1 : nil }) {
+//            arr[j + 1] = arr[j]
+//        }
         arr[index] = num
         _size += 1
     }
@@ -133,11 +137,18 @@ class MyList {
     
     /// 将列表转换为数组
     func toArray() -> [Int] {
-        var arr = Array(repeating: 0, count: _size)
-        for i in 0 ..< _size {
-            arr[i] = get(index: i)
-        }
-        return arr
+        // 写法1
+        Array(arr.prefix(_size))
+        
+        // 写法2
+//        Array(arr[0..._size])
+        
+        // 写法3
+//        var arr = Array(repeating: 0, count: _size)
+//        for i in 0 ..< _size {
+//            arr[i] = get(index: i)
+//        }
+//        return arr
     }
 }
 

@@ -70,7 +70,8 @@ class LinkedListStack {
     func toArray() -> [Int] {
         var node = _peek
         var res = Array(repeating: 0, count: _size)
-        for i in sequence(first: res.count - 1, next: { $0 >= 0 + 1 ? $0 - 1 : nil }) {
+        for i in stride(from: _size - 1, through: 0, by: -1) {
+//        for i in sequence(first: res.count - 1, next: { $0 >= 0 + 1 ? $0 - 1 : nil }) {
             res[i] = node!.val
             node = node?.next
         }
