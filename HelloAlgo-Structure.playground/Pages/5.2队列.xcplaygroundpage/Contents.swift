@@ -15,6 +15,7 @@ queue.append(4)
 // 访问队首元素
 let peek = queue.first
 // 元素出队
+// 由于是数组，因此 removeFirst 的复杂度为 O(n)
 let pool = queue.removeFirst()
 // 获取队的长度
 let size = queue.count
@@ -112,14 +113,14 @@ class ArrayQueue {
     
     /// 入队
     func push(num: Int) {
-        guard size() != capacity() else {
-            print("队列已满")
-            return
+        // 自动扩容
+        if queSize == capacity() {
+            extendCapacity()
         }
-        // 计算尾指针，指向队尾索引 + 1
+        // 计算队尾指针，指向队尾索引 + 1
         // 通过取余操作，实现 rear 越过数组尾部后回到头部
-        let rear = (front + queSize) * capacity()
-        // 讲 num 添加至队尾
+        let rear = (front + queSize) % capacity()
+        // 将 num 添加至队尾
         nums[rear] = num
         queSize += 1
     }
@@ -127,11 +128,11 @@ class ArrayQueue {
     /// 出队
     @discardableResult
     func pop() -> Int {
-        let num = peek()
+        let val = peek()
         // 队首指针向后移动一位，若越过尾部则返回到数组头部
         front = (front + 1) % capacity()
         queSize -= 1
-        return num
+        return val
     }
     
     /// 访问队首元素
@@ -142,14 +143,28 @@ class ArrayQueue {
         return nums[front]
     }
     
+    /// 扩容
+    private func extendCapacity() {
+        let oldCapacity = capacity()
+        let newCapacity = oldCapacity * 2
+        
+        var newNums = Array(repeating: 0, count: newCapacity)
+        
+        // 按“逻辑顺序”搬运数据
+        for i in 0..<queSize {
+            newNums[i] = nums[(front + i) % oldCapacity]
+        }
+        
+        nums = newNums
+        front = 0
+    }
+    
     /// 将 List 转化为 Array 并返回
     func toArray() -> [Int] {
         // 仅转换有效长度范围内的列表元素
-        var res = Array(repeating: 0, count: queSize)
-        for (i, j) in sequence(first: (0, front), next: { $0 < self.queSize - 1 ? ($0 + 1, $1 + 1) : nil }) {
-            res[i] = nums[j % capacity()]
+        (0..<queSize).map {
+            nums[(front + $0) % capacity()]
         }
-        return res
     }
 }
 
