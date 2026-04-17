@@ -9,7 +9,7 @@ var deque: [Int] = []
 deque.append(2) // 添加至队尾
 deque.append(5)
 deque.append(4)
-deque.insert(3, at: 0) // 添加至队首
+deque.insert(3, at: 0) // 添加至队首 复杂度为 O(n)
 deque.insert(1, at: 0)
 
 // 访问队首元素
@@ -29,7 +29,7 @@ let isEmpty = deque.isEmpty
 
 /// ------ 基于双向链表实现的队列 ------
 
-/// 链表节点类
+/// 双向链表节点类
 class ListNode {
     var val: Int // 节点值
     var next: ListNode? // 后继节点引用
@@ -40,7 +40,7 @@ class ListNode {
     }
 }
 
-/// 基于双向链表实现的队列
+/// 基于双向链表实现的双向队列
 class LinkedListDeque {
     private var front: ListNode? // 头节点
     private var rear: ListNode? // 尾节点
@@ -153,7 +153,7 @@ class LinkedListDeque {
     }
 }
 
-/// 基于环形数组实现的队列
+/// 基于环形数组实现的双向队列
 class ArrayDeque {
     private var nums: [Int] // 用与存储队列元素的数组
     private var front = 0 // 队首指针，指向队首元素
@@ -189,8 +189,7 @@ class ArrayDeque {
     /// 队首入队
     func pushFirst(num: Int) {
         if size() == capacity() {
-            print("双向队列已满")
-            return
+            extendCapacity()
         }
         // 队首指针向左移动一位
         // 通过取余操作，实现 front 越过数组头部后回到尾部
@@ -203,8 +202,7 @@ class ArrayDeque {
     /// 队尾入队
     func pushLast(num: Int) {
         if size() == capacity() {
-            print("双向队列已满")
-            return
+            extendCapacity()
         }
         // 计算尾指针，指向队尾索引 + 1
         let rear = index(i: front + size())
@@ -247,14 +245,28 @@ class ArrayDeque {
         return nums[last]
     }
     
+    /// 扩容
+    private func extendCapacity() {
+        let oldCapacity = capacity()
+        let newCapacity = oldCapacity * 2
+        
+        var newNums = Array(repeating: 0, count: newCapacity)
+        
+        // 按“逻辑顺序”搬运数据（从 front 开始）
+        for i in 0..<queSize {
+            newNums[i] = nums[index(i: front + i)]
+        }
+        
+        nums = newNums
+        front = 0
+    }
+    
     /// 将 List 转化为 Array 并返回
     func toArray() -> [Int] {
         // 仅转换有效长度范围内的列表元素
-        var res = Array(repeating: 0, count: queSize)
-        for (i, j) in sequence(first: (0, front), next: { $0 < self.queSize - 1 ? ($0 + 1, $1 + 1) : nil }) {
-            res[i] = nums[j % capacity()]
+        (0..<queSize).map {
+            nums[index(i: front + $0)]
         }
-        return res
     }
 }
 
