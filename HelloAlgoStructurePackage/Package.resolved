@@ -1,0 +1,15 @@
+{
+  "originHash" : "8ef2e9648e0820d490adc201ea8a4d3574ac52c02f4fd30075a727a2cd7a3b1b",
+  "pins" : [
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitee.com/zhahao/swift-collections.git",
+      "state" : {
+        "revision" : "6675bc0ff86e61436e615df6fc5174e043e57924",
+        "version" : "1.4.1"
+      }
+    }
+  ],
+  "version" : 3
+}
